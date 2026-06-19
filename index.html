@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNNU Live Demo - White/Clean-Tech</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Unity WebGL Styles -->
+    <link rel="stylesheet" href="TemplateData/style.css">
+</head>
+
+<body>
+
+    <!-- Main Content Container -->
+    <main id="app-container">
+
+        <!-- Section 1: The Hook -->
+        <section id="section-hook" class="demo-section active">
+            <div class="content-wrapper">
+                <div class="video-capsule">
+                    <video autoplay loop muted playsinline>
+                        <!-- Using a highly reliable W3C placeholder video -->
+                        <source src="video/v1.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-overlay">
+                        <h1>From neural potential to institutional strength.</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: The Interface -->
+        <section id="section-interface" class="demo-section">
+            <div class="content-wrapper">
+                <div class="text-center">
+                    <h2 class="section-title">Zero-Header Interface</h2>
+                    <p class="section-subtitle">We eliminated the traditional header to focus 100% on the visuals
+                        investors want to see.<br>Navigation is handled seamlessly below.</p>
+                </div>
+                <div class="ui-mockup">
+                    <div class="glass-card">
+                        <i class="fa-solid fa-layer-group card-icon"></i>
+                        <h3>Immersive UI</h3>
+                        <p>Content loaded dynamically without page reloads. The focus stays entirely on the content.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: The Content -->
+        <section id="section-content" class="demo-section">
+            <div class="content-wrapper">
+                <h2 class="section-title text-center">Research Sites & Labs</h2>
+                <div class="labs-grid">
+                    <div class="lab-module map-module">
+                        <div class="module-header">
+                            <i class="fa-solid fa-flask"></i> SNNU Laboratories
+                        </div>
+                        <div class="module-body lab-menu-container">
+                            <ul class="lab-menu">
+                                <li class="lab-menu-item">
+                                    <div class="lab-icon"><i class="fa-solid fa-microscope"></i></div>
+                                    <div class="lab-details">
+                                        <h4>Translational Lab</h4>
+                                        <p>Clinical translation of cognitive technologies</p>
+                                    </div>
+                                </li>
+                                <li class="lab-menu-item">
+                                    <div class="lab-icon"><i class="fa-solid fa-brain"></i></div>
+                                    <div class="lab-details">
+                                        <h4>Mindscan Lab</h4>
+                                        <p>Non-invasive brain monitoring</p>
+                                    </div>
+                                </li>
+                                <li class="lab-menu-item">
+                                    <div class="lab-icon"><i class="fa-solid fa-network-wired"></i></div>
+                                    <div class="lab-details">
+                                        <h4>Multiscale Lab</h4>
+                                        <p>Neuromodeling & signal processing</p>
+                                    </div>
+                                </li>
+                                <li class="lab-menu-item">
+                                    <div class="lab-icon"><i class="fa-solid fa-vr-cardboard"></i></div>
+                                    <div class="lab-details">
+                                        <h4>Digital Realities Lab</h4>
+                                        <p>Immersive VR and interaction</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="lab-module unity-module">
+                        <div class="module-header">
+                            <i class="fa-brands fa-unity"></i> 360° Lab & 46-Speaker System
+                        </div>
+                        <div class="module-body unity-desktop" id="unity-container">
+                            <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+                            <div id="unity-loading-bar">
+                                <div id="unity-logo"></div>
+                                <div id="unity-progress-bar-empty">
+                                    <div id="unity-progress-bar-full"></div>
+                                </div>
+                            </div>
+                            <div id="unity-warning"> </div>
+                            <div id="unity-footer">
+                                <div id="unity-logo-title-footer"></div>
+                                <div id="unity-fullscreen-button"></div>
+                                <div id="unity-build-title">SNNUnit_VirtualTour</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: The People -->
+        <section id="section-people" class="demo-section">
+            <div class="content-wrapper">
+                <div class="people-grid">
+                    <div class="people-visuals">
+                        <div class="slideshow-3">
+                            <img src="image/gifPeople1.jpg" alt="People 1">
+                            <img src="image/gifPeople2.jpg" alt="People 2">
+                            <img src="image/gifPeople3.jpg" alt="People 3">
+                        </div>
+                    </div>
+                    <div class="people-info">
+                        <h2 class="section-title text-center">The Minds Behind</h2>
+                        <p class="section-subtitle text-center">A brilliant team of neuroscientists and engineers pushing the boundaries.</p>
+                        <div class="people-list mt-4 people-list-container"
+                            style="max-height: 380px; overflow-y: auto;">
+                            <!-- Category 1 -->
+                            <h4 class="people-category">Director</h4>
+                            <div class="people-item person-card" data-name="Prof. Dr. Daniel J. Strauss" data-role="Director">
+                                <div class="people-item-icon"><i class="fa-solid fa-user-tie"></i></div>
+                                <div class="people-item-content">
+                                    <h3>Prof. Dr. Daniel J. Strauss</h3>
+                                    <p>View Profile</p>
+                                </div>
+                            </div>
+
+                            <!-- Category 2 -->
+                            <h4 class="people-category">Deputy Director</h4>
+                            <div class="people-item person-card" data-name="Dr. Lars Haab"
+                                data-role="Deputy Director">
+                                <div class="people-item-icon"><i class="fa-solid fa-user-shield"></i></div>
+                                <div class="people-item-content">
+                                    <h3>Dr. Lars Haab</h3>
+                                    <p>View Profile</p>
+                                </div>
+                            </div>
+
+                            <!-- Category 3 -->
+                            <h4 class="people-category">Lab Heads</h4>
+                            <div class="people-item person-card" data-name="Dr. Farah I. Corona-Strauss"
+                                data-role="Mindscan Lab">
+                                <div class="people-item-icon"><i class="fa-solid fa-flask"></i></div>
+                                <div class="people-item-content">
+                                    <h3>Dr. Farah I. Corona-Strauss</h3>
+                                    <p>View Profile</p>
+                                </div>
+                            </div>
+                            <div class="people-item person-card" data-name="Dr. Corinna Martin"
+                                data-role="Translational Lab">
+                                <div class="people-item-icon"><i class="fa-solid fa-flask"></i></div>
+                                <div class="people-item-content">
+                                    <h3>Dr. Corinna Martin</h3>
+                                    <p>View Profile</p>
+                                </div>
+                            </div>
+                            <div class="people-item person-card" data-name="Dr. Lars Haab"
+                                data-role="Multiscale Lab">
+                                <div class="people-item-icon"><i class="fa-solid fa-flask"></i></div>
+                                <div class="people-item-content">
+                                    <h3>Dr. Lars Haab</h3>
+                                    <p>View Profile</p>
+                                </div>
+                            </div>
+                            <div class="people-item person-card" data-name="Tobias Grün, M.Sc."
+                                data-role="Digital Realities Lab">
+                                <div class="people-item-icon"><i class="fa-solid fa-flask"></i></div>
+                                <div class="people-item-content">
+                                    <h3>Tobias Grün, M.Sc.</h3>
+                                    <p>View Profile</p>
+                                </div>
+                            </div>
+
+                            <!-- Category 4 -->
+                            <h4 class="people-category">Researchers & PhD Students</h4>
+                            <div class="people-item person-card" data-name="Leen Almasu, M.Sc."
+                                data-role="PhD Student">
+                                <div class="people-item-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <div class="people-item-content">
+                                    <h3>Leen Almasu, M.Sc.</h3>
+                                    <p>View Profile</p>
+                                </div>
+                            </div>
+                            <div class="people-item person-card" data-name="Mayur Bhamborae Jayaram, M.Sc."
+                                data-role="PhD Student">
+                                <div class="people-item-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <div class="people-item-content">
+                                    <h3>Mayur Bhamborae Jayaram, M.Sc.</h3>
+                                    <p>View Profile</p>
+                                </div>
+                            </div>
+                            <div class="people-item person-card" data-name="Tanja Biehl, M.Sc."
+                                data-role="PhD Student">
+                                <div class="people-item-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <div class="people-item-content">
+                                    <h3>Tanja Biehl, M.Sc.</h3>
+                                    <p>View Profile</p>
+                                </div>
+                            </div>
+                            <div class="people-item person-card" data-name="Sophie Bonnaire, M.Sc."
+                                data-role="PhD Student">
+                                <div class="people-item-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <div class="people-item-content">
+                                    <h3>Sophie Bonnaire, M.Sc.</h3>
+                                    <p>View Profile</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: The Editor -->
+        <section id="section-editor" class="demo-section">
+            <div class="content-wrapper">
+                <div class="editor-header text-center">
+                    <h2 class="section-title">The WordPress workflow never changes</h2>
+                    <p class="section-subtitle">Powered by WordPress API. The editor keeps their workflow, the frontend
+                        does the rest.</p>
+                </div>
+                <div class="news-feed" id="news-container">
+                    <!-- Fetched via JS -->
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: The Future -->
+        <section id="section-future" class="demo-section">
+            <div class="content-wrapper text-center">
+                <div class="vr-concept">
+                    <i class="fa-solid fa-headset concept-icon pulse"></i>
+                    <h2 class="section-title">Ready for WebXR</h2>
+                    <p class="section-subtitle" style="max-width: 600px; margin: 0 auto;">
+                        Experience the lab in immersive VR. Open the link below on a <strong>Meta Quest</strong> browser and tap <em>"Enter VR"</em> — no app installation required.
+                    </p>
+                    <a href="vr-demo.html" target="_blank" class="primary-btn mt-4" style="display: inline-block; text-decoration: none;">
+                        <i class="fa-solid fa-vr-cardboard" style="margin-right: 0.5rem;"></i> Launch VR Demo
+                    </a>
+                    <p style="margin-top: 1.2rem; font-size: 0.85rem; color: var(--text-muted);">
+                        <i class="fa-brands fa-meta" style="margin-right: 0.3rem;"></i> On Meta Quest: open <code style="background: rgba(0,0,0,0.06); padding: 2px 6px; border-radius: 4px;">your-url/vr-demo.html</code> in Meta Browser → tap Enter VR
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Floating Dock -->
+    <nav class="floating-dock">
+        <div class="dock-item active" data-target="section-hook" title="The Hook">
+            <i class="fa-solid fa-video"></i>
+            <span class="dock-label">Intro</span>
+        </div>
+        <div class="dock-item" data-target="section-interface" title="The Interface">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span class="dock-label">UI/UX</span>
+        </div>
+        <div class="dock-item" data-target="section-content" title="The Content">
+            <i class="fa-solid fa-microscope"></i>
+            <span class="dock-label">Labs</span>
+        </div>
+        <div class="dock-item" data-target="section-people" title="The People">
+            <i class="fa-solid fa-users"></i>
+            <span class="dock-label">People</span>
+        </div>
+        <div class="dock-item" data-target="section-editor" title="Editor">
+            <i class="fa-brands fa-wordpress"></i>
+            <span class="dock-label">News</span>
+        </div>
+        <div class="dock-item" data-target="section-future" title="The Future">
+            <i class="fa-solid fa-glasses"></i>
+            <span class="dock-label">WebXR</span>
+        </div>
+    </nav>
+
+    <script src="js/app.js"></script>
+
+    <!-- Person Modal -->
+    <div id="person-modal" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <span class="close-modal"><i class="fa-solid fa-xmark"></i></span>
+            <div class="modal-header">
+                <div class="modal-avatar"><i class="fa-solid fa-user"></i></div>
+                <div>
+                    <h3 id="modal-name">Anonymous Person</h3>
+                    <p id="modal-role" class="text-muted">Role</p>
+                </div>
+            </div>
+            <div class="modal-body mt-4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+                <p style="margin-top: 1rem;">Research interests encompass multiscale neural engineering, advanced data
+                    analysis techniques, and clinical translation of cognitive technologies.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Unity Initialization Script -->
+    <script>
+      var canvas = document.querySelector("#unity-canvas");
+
+      function unityShowBanner(msg, type) {
+        var warningBanner = document.querySelector("#unity-warning");
+        function updateBannerVisibility() {
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+        }
+        var div = document.createElement('div');
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+        if (type == 'error') div.style = 'background: red; padding: 10px;';
+        else {
+          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+          setTimeout(function() {
+            warningBanner.removeChild(div);
+            updateBannerVisibility();
+          }, 5000);
+        }
+        updateBannerVisibility();
+      }
+
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/VirtualTourVRweb.loader.js";
+      var config = {
+        arguments: [],
+        dataUrl: buildUrl + "/VirtualTourVRweb.data",
+        frameworkUrl: buildUrl + "/VirtualTourVRweb.framework.js",
+        codeUrl: buildUrl + "/VirtualTourVRweb.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "SNNUnit_VirtualTour",
+        productVersion: "0.1",
+        showBanner: unityShowBanner,
+      };
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        document.querySelector("#unity-container").className = "unity-mobile module-body";
+        canvas.className = "unity-mobile";
+      } else {
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
+      }
+
+      document.querySelector("#unity-loading-bar").style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
+        }).then((unityInstance) => {
+          document.querySelector("#unity-loading-bar").style.display = "none";
+          document.querySelector("#unity-fullscreen-button").onclick = () => {
+            unityInstance.SetFullscreen(1);
+          };
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+</body>
+
+</html>
