@@ -347,11 +347,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // ========== PLAYLIST DE VIDEOS ==========
     const videos = [
         {
-            src: 'assets/videos/Crimson_Memories.mp4',
+            src: 'https://snnu.smiteandoelblue.workers.dev/unity/crimson',
             titulo: 'VIDEO: Crimson Memories'
         },
         {
-            src: 'assets/videos/CEREAL.mp4',
+            src: 'https://snnu.smiteandoelblue.workers.dev/unity/cereal',
             titulo: 'VIDEO: CEREAL'
         }
     ];
