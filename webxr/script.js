@@ -11,10 +11,11 @@ document.addEventListener('DOMContentLoaded', function () {
     let audioCtx = null;
     let zumbidoFondo = null;
     let gainZumbido = null;
+    let enModo360 = false;
 
     function iniciarMedios() {
         const vid = document.querySelector('#video-asset');
-        if (vid && vid.paused) {
+        if (vid && vid.paused && !enModo360) {
             vid.muted = false;
             vid.play().catch(e => console.log('Video autoplay error:', e));
         }
@@ -381,7 +382,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const entorno360 = document.querySelector('#entorno-360');
     const video360 = document.querySelector('#video-360-asset');
     const rig = document.querySelector('#rig');
-    let enModo360 = false;
 
     if (botonRojo360 && entornoPrincipal && entorno360 && video360 && rig) {
         botonRojo360.addEventListener('click', () => {
