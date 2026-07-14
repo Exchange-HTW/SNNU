@@ -362,6 +362,8 @@ body {
     border-radius: 30px;
     padding: 0.5rem;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 0.5rem;
     box-shadow: 0 10px 40px rgba(0,0,0,0.1);
     z-index: 100;
@@ -406,6 +408,86 @@ body {
 .dock-item:hover .dock-label {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* --------------------------------------
+   Top Navbar Mode
+   -------------------------------------- */
+.floating-dock.dock-top {
+    bottom: auto;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--dock-border);
+    padding: 1rem 5%;
+    justify-content: flex-end; /* Align items to the right */
+    gap: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.floating-dock.dock-top .dock-toggle-pos {
+    margin-right: auto; /* Push toggle to the left */
+}
+
+.floating-dock.dock-top .dock-item {
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    background: transparent;
+}
+
+.floating-dock.dock-top .dock-item:hover {
+    background: rgba(0,0,0,0.05);
+    transform: none;
+}
+
+.floating-dock.dock-top .dock-item.active {
+    background: rgba(14, 165, 233, 0.1);
+    box-shadow: none;
+}
+
+.floating-dock.dock-top .dock-item i {
+    display: none; /* Hide icons in top mode */
+}
+
+.floating-dock.dock-top .dock-label {
+    position: static;
+    opacity: 1;
+    transform: none;
+    background: transparent;
+    color: var(--text-main);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0;
+    pointer-events: auto;
+}
+
+.floating-dock.dock-top .dock-item.active .dock-label {
+    color: var(--accent);
+}
+
+.dock-toggle-pos {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+.dock-toggle-pos:hover {
+    background: rgba(0,0,0,0.05);
+    color: var(--text-main);
+}
+.dock-toggle-pos:active {
+    transform: scale(0.95);
 }
 
 /* Animations */
@@ -585,3 +667,51 @@ body {
     color: var(--text-muted);
     margin: 0;
 }
+
+/* Frosted Glass with Inner Blue Fluid */
+.melted-3d-card {
+    /* Base background: mostly transparent white, with faint blue spots to simulate internal fluid */
+    background: 
+        radial-gradient(circle at 10% 20%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(0, 78, 140, 0.1) 0%, transparent 50%),
+        rgba(255, 255, 255, 0.7);
+    
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    
+    /* 3D bevel and melted soft edges */
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.05),              /* outer drop shadow */
+        inset -3px -3px 15px rgba(255, 255, 255, 0.8), /* inner white glass edge highlight */
+        inset 5px 5px 20px rgba(14, 165, 233, 0.15);   /* inner blue fluid glow */
+    
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    
+    /* Text color for white background */
+    color: var(--text-main); 
+}
+
+/* Ensure inner elements maintain good contrast */
+.melted-3d-card h3, .melted-3d-card h4, .melted-3d-card .module-header {
+    color: var(--text-main);
+}
+.melted-3d-card .text-muted, .melted-3d-card p {
+    color: var(--text-muted);
+}
+.melted-3d-card .module-body {
+    background: rgba(255, 255, 255, 0.4); /* slightly transparent inner areas */
+}
+/* For the labs list */
+.melted-3d-card .lab-menu-item {
+    background: rgba(255, 255, 255, 0.5);
+    color: var(--text-main);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+.melted-3d-card .lab-details h4 { color: var(--text-main); }
+.melted-3d-card .lab-details p { color: var(--text-muted); }
+.melted-3d-card .lab-icon { background: rgba(255, 255, 255, 0.6); color: var(--accent); }
+
+/* News date */
+.melted-3d-card .news-date { color: var(--accent); }
+

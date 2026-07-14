@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // Specific logic for sections
-            if (targetId === 'section-editor' && newsContainer.children.length === 1) {
+            if (targetId === 'section-news' && newsContainer.children.length === 1) {
                 // If it's the first time visiting the editor section, fetch news
                 fetchMockNews();
             }
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Render news cards
             mockData.forEach((news, index) => {
                 const card = document.createElement('div');
-                card.className = 'news-card';
+                card.className = 'news-card melted-3d-card';
                 card.style.animationDelay = `${index * 0.15}s`;
                 card.innerHTML = `
                     <div class="news-date">${news.date}</div>
@@ -101,6 +101,25 @@ document.addEventListener('DOMContentLoaded', () => {
         personModal.addEventListener('click', (e) => {
             if (e.target === personModal) {
                 personModal.classList.remove('active');
+            }
+        });
+    }
+
+    // Navbar Toggle Position Logic
+    const togglePosBtn = document.getElementById('dock-pos-toggle');
+    const floatingDock = document.getElementById('floating-dock');
+    if (togglePosBtn && floatingDock) {
+        togglePosBtn.addEventListener('click', () => {
+            floatingDock.classList.toggle('dock-top');
+            
+            // Optionally, change the icon based on position
+            const icon = togglePosBtn.querySelector('i');
+            if (floatingDock.classList.contains('dock-top')) {
+                // If it's at the top, point down
+                icon.className = 'fa-solid fa-arrow-down';
+            } else {
+                // If it's at the bottom, point up
+                icon.className = 'fa-solid fa-arrow-up';
             }
         });
     }

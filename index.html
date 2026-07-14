@@ -21,8 +21,8 @@
     <!-- Main Content Container -->
     <main id="app-container">
 
-        <!-- Section 1: The Hook -->
-        <section id="section-hook" class="demo-section active">
+        <!-- Section 1: Home -->
+        <section id="section-home" class="demo-section active">
             <div class="content-wrapper">
                 <div class="video-capsule">
                     <video autoplay loop muted playsinline>
@@ -36,30 +36,13 @@
             </div>
         </section>
 
-        <!-- Section 2: The Interface -->
-        <section id="section-interface" class="demo-section">
-            <div class="content-wrapper">
-                <div class="text-center">
-                    <h2 class="section-title">Zero-Header Interface</h2>
-                    <p class="section-subtitle">We eliminated the traditional header to focus 100% on the visuals
-                        investors want to see.<br>Navigation is handled seamlessly below.</p>
-                </div>
-                <div class="ui-mockup">
-                    <div class="glass-card">
-                        <i class="fa-solid fa-layer-group card-icon"></i>
-                        <h3>Immersive UI</h3>
-                        <p>Content loaded dynamically without page reloads. The focus stays entirely on the content.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Section 3: The Content -->
-        <section id="section-content" class="demo-section">
+        <!-- Section: Research Site -->
+        <section id="section-research-site" class="demo-section">
             <div class="content-wrapper">
                 <h2 class="section-title text-center">Research Sites & Labs</h2>
-                <div class="labs-grid">
-                    <div class="lab-module map-module">
+                <div class="labs-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto;">
+                    <div class="lab-module map-module melted-3d-card">
                         <div class="module-header">
                             <i class="fa-solid fa-flask"></i> SNNU Laboratories
                         </div>
@@ -96,7 +79,16 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="lab-module unity-module">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Virtual Tour -->
+        <section id="section-virtual-tour" class="demo-section">
+            <div class="content-wrapper">
+                <h2 class="section-title text-center">360° Virtual Tour</h2>
+                <div class="labs-grid" style="grid-template-columns: 1fr; max-width: 960px; margin: 0 auto;">
+                    <div class="lab-module unity-module melted-3d-card">
                         <div class="module-header">
                             <i class="fa-brands fa-unity"></i> 360° Lab & 46-Speaker System
                         </div>
@@ -115,6 +107,11 @@
                                 <div id="unity-build-title">SNNUnit_VirtualTour</div>
                             </div>
                         </div>
+                    </div>
+                    <div class="text-center" style="grid-column: 1 / -1; margin-top: 1rem;">
+                        <a href="webxr/index.html" target="_blank" class="primary-btn" style="display: inline-block; text-decoration: none;">
+                            <i class="fa-solid fa-vr-cardboard" style="margin-right: 0.5rem;"></i> Launch WebXR VR Demo
+                        </a>
                     </div>
                 </div>
             </div>
@@ -138,7 +135,7 @@
                             style="max-height: 380px; overflow-y: auto;">
                             <!-- Category 1 -->
                             <h4 class="people-category">Director</h4>
-                            <div class="people-item person-card" data-name="Prof. Dr. Daniel J. Strauss" data-role="Director">
+                            <div class="people-item person-card melted-3d-card" data-name="Prof. Dr. Daniel J. Strauss" data-role="Director">
                                 <div class="people-item-icon"><i class="fa-solid fa-user-tie"></i></div>
                                 <div class="people-item-content">
                                     <h3>Prof. Dr. Daniel J. Strauss</h3>
@@ -148,7 +145,7 @@
 
                             <!-- Category 2 -->
                             <h4 class="people-category">Deputy Director</h4>
-                            <div class="people-item person-card" data-name="Dr. Lars Haab"
+                            <div class="people-item person-card melted-3d-card" data-name="Dr. Lars Haab"
                                 data-role="Deputy Director">
                                 <div class="people-item-icon"><i class="fa-solid fa-user-shield"></i></div>
                                 <div class="people-item-content">
@@ -159,7 +156,7 @@
 
                             <!-- Category 3 -->
                             <h4 class="people-category">Lab Heads</h4>
-                            <div class="people-item person-card" data-name="Dr. Farah I. Corona-Strauss"
+                            <div class="people-item person-card melted-3d-card" data-name="Dr. Farah I. Corona-Strauss"
                                 data-role="Mindscan Lab">
                                 <div class="people-item-icon"><i class="fa-solid fa-flask"></i></div>
                                 <div class="people-item-content">
@@ -167,7 +164,7 @@
                                     <p>View Profile</p>
                                 </div>
                             </div>
-                            <div class="people-item person-card" data-name="Dr. Corinna Martin"
+                            <div class="people-item person-card melted-3d-card" data-name="Dr. Corinna Martin"
                                 data-role="Translational Lab">
                                 <div class="people-item-icon"><i class="fa-solid fa-flask"></i></div>
                                 <div class="people-item-content">
@@ -175,7 +172,7 @@
                                     <p>View Profile</p>
                                 </div>
                             </div>
-                            <div class="people-item person-card" data-name="Dr. Lars Haab"
+                            <div class="people-item person-card melted-3d-card" data-name="Dr. Lars Haab"
                                 data-role="Multiscale Lab">
                                 <div class="people-item-icon"><i class="fa-solid fa-flask"></i></div>
                                 <div class="people-item-content">
@@ -183,7 +180,7 @@
                                     <p>View Profile</p>
                                 </div>
                             </div>
-                            <div class="people-item person-card" data-name="Tobias Grün, M.Sc."
+                            <div class="people-item person-card melted-3d-card" data-name="Tobias Grün, M.Sc."
                                 data-role="Digital Realities Lab">
                                 <div class="people-item-icon"><i class="fa-solid fa-flask"></i></div>
                                 <div class="people-item-content">
@@ -194,7 +191,7 @@
 
                             <!-- Category 4 -->
                             <h4 class="people-category">Researchers & PhD Students</h4>
-                            <div class="people-item person-card" data-name="Leen Almasu, M.Sc."
+                            <div class="people-item person-card melted-3d-card" data-name="Leen Almasu, M.Sc."
                                 data-role="PhD Student">
                                 <div class="people-item-icon"><i class="fa-solid fa-graduation-cap"></i></div>
                                 <div class="people-item-content">
@@ -202,7 +199,7 @@
                                     <p>View Profile</p>
                                 </div>
                             </div>
-                            <div class="people-item person-card" data-name="Mayur Bhamborae Jayaram, M.Sc."
+                            <div class="people-item person-card melted-3d-card" data-name="Mayur Bhamborae Jayaram, M.Sc."
                                 data-role="PhD Student">
                                 <div class="people-item-icon"><i class="fa-solid fa-graduation-cap"></i></div>
                                 <div class="people-item-content">
@@ -210,7 +207,7 @@
                                     <p>View Profile</p>
                                 </div>
                             </div>
-                            <div class="people-item person-card" data-name="Tanja Biehl, M.Sc."
+                            <div class="people-item person-card melted-3d-card" data-name="Tanja Biehl, M.Sc."
                                 data-role="PhD Student">
                                 <div class="people-item-icon"><i class="fa-solid fa-graduation-cap"></i></div>
                                 <div class="people-item-content">
@@ -218,7 +215,7 @@
                                     <p>View Profile</p>
                                 </div>
                             </div>
-                            <div class="people-item person-card" data-name="Sophie Bonnaire, M.Sc."
+                            <div class="people-item person-card melted-3d-card" data-name="Sophie Bonnaire, M.Sc."
                                 data-role="PhD Student">
                                 <div class="people-item-icon"><i class="fa-solid fa-graduation-cap"></i></div>
                                 <div class="people-item-content">
@@ -232,8 +229,8 @@
             </div>
         </section>
 
-        <!-- Section 5: The Editor -->
-        <section id="section-editor" class="demo-section">
+        <!-- Section: News -->
+        <section id="section-news" class="demo-section">
             <div class="content-wrapper">
                 <div class="editor-header text-center">
                     <h2 class="section-title">The WordPress workflow never changes</h2>
@@ -247,21 +244,74 @@
             </div>
         </section>
 
-        <!-- Section 6: The Future -->
-        <section id="section-future" class="demo-section">
+        <!-- Section: Publication -->
+        <section id="section-publication" class="demo-section">
             <div class="content-wrapper text-center">
-                <div class="vr-concept">
-                    <i class="fa-solid fa-headset concept-icon pulse"></i>
-                    <h2 class="section-title">Ready for WebXR</h2>
-                    <p class="section-subtitle" style="max-width: 600px; margin: 0 auto;">
-                        Experience the lab in immersive VR. Open the link below on a <strong>Meta Quest</strong> browser and tap <em>"Enter VR"</em> — no app installation required.
-                    </p>
-                    <a href="vr-demo.html" target="_blank" class="primary-btn mt-4" style="display: inline-block; text-decoration: none;">
-                        <i class="fa-solid fa-vr-cardboard" style="margin-right: 0.5rem;"></i> Launch VR Demo
-                    </a>
-                    <p style="margin-top: 1.2rem; font-size: 0.85rem; color: var(--text-muted);">
-                        <i class="fa-brands fa-meta" style="margin-right: 0.3rem;"></i> On Meta Quest: open <code style="background: rgba(0,0,0,0.06); padding: 2px 6px; border-radius: 4px;">your-url/vr-demo.html</code> in Meta Browser → tap Enter VR
-                    </p>
+                <h2 class="section-title">Publication</h2>
+                <div class="glass-card melted-3d-card" style="margin: 2rem auto; max-width: 800px; padding: 3rem;">
+                    <i class="fa-solid fa-book card-icon" style="font-size: 3rem; margin-bottom: 1rem; color: var(--text-main);"></i>
+                    <h3>Coming Soon</h3>
+                    <p>Recent publications and academic papers will be listed here.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Preprint -->
+        <section id="section-preprint" class="demo-section">
+            <div class="content-wrapper text-center">
+                <h2 class="section-title">Preprint</h2>
+                <div class="glass-card melted-3d-card" style="margin: 2rem auto; max-width: 800px; padding: 3rem;">
+                    <i class="fa-solid fa-file-lines card-icon" style="font-size: 3rem; margin-bottom: 1rem; color: var(--text-main);"></i>
+                    <h3>Coming Soon</h3>
+                    <p>Preprints and early research findings will be available here.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Recent Projects -->
+        <section id="section-projects" class="demo-section">
+            <div class="content-wrapper text-center">
+                <h2 class="section-title">Recent Projects</h2>
+                <div class="glass-card melted-3d-card" style="margin: 2rem auto; max-width: 800px; padding: 3rem;">
+                    <i class="fa-solid fa-diagram-project card-icon" style="font-size: 3rem; margin-bottom: 1rem; color: var(--text-main);"></i>
+                    <h3>Coming Soon</h3>
+                    <p>Details on our latest research projects and collaborations.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Teaching -->
+        <section id="section-teaching" class="demo-section">
+            <div class="content-wrapper text-center">
+                <h2 class="section-title">Teaching</h2>
+                <div class="glass-card melted-3d-card" style="margin: 2rem auto; max-width: 800px; padding: 3rem;">
+                    <i class="fa-solid fa-person-chalkboard card-icon" style="font-size: 3rem; margin-bottom: 1rem; color: var(--text-main);"></i>
+                    <h3>Coming Soon</h3>
+                    <p>Information regarding courses, lectures, and academic programs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Join Us -->
+        <section id="section-join" class="demo-section">
+            <div class="content-wrapper text-center">
+                <h2 class="section-title">Join Us</h2>
+                <div class="glass-card melted-3d-card" style="margin: 2rem auto; max-width: 800px; padding: 3rem;">
+                    <i class="fa-solid fa-user-plus card-icon" style="font-size: 3rem; margin-bottom: 1rem; color: var(--text-main);"></i>
+                    <h3>Coming Soon</h3>
+                    <p>Open positions, PhD opportunities, and how to apply.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Legal Notice -->
+        <section id="section-legal" class="demo-section">
+            <div class="content-wrapper text-center">
+                <h2 class="section-title">Legal Notice</h2>
+                <div class="glass-card melted-3d-card" style="margin: 2rem auto; max-width: 800px; padding: 3rem;">
+                    <i class="fa-solid fa-scale-balanced card-icon" style="font-size: 3rem; margin-bottom: 1rem; color: var(--text-main);"></i>
+                    <h3>Impressum / Privacy</h3>
+                    <p>Legal information and data privacy details will be placed here.</p>
                 </div>
             </div>
         </section>
@@ -269,30 +319,53 @@
     </main>
 
     <!-- Floating Dock -->
-    <nav class="floating-dock">
-        <div class="dock-item active" data-target="section-hook" title="The Hook">
-            <i class="fa-solid fa-video"></i>
-            <span class="dock-label">Intro</span>
+    <nav class="floating-dock dock-top" id="floating-dock">
+        <div class="dock-toggle-pos" id="dock-pos-toggle" title="Toggle Position">
+            <i class="fa-solid fa-arrow-down"></i>
         </div>
-        <div class="dock-item" data-target="section-interface" title="The Interface">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-            <span class="dock-label">UI/UX</span>
+        <div class="dock-item active" data-target="section-home" title="Home">
+            <i class="fa-solid fa-house"></i>
+            <span class="dock-label">Home</span>
         </div>
-        <div class="dock-item" data-target="section-content" title="The Content">
-            <i class="fa-solid fa-microscope"></i>
-            <span class="dock-label">Labs</span>
-        </div>
-        <div class="dock-item" data-target="section-people" title="The People">
+        <div class="dock-item" data-target="section-people" title="People">
             <i class="fa-solid fa-users"></i>
             <span class="dock-label">People</span>
         </div>
-        <div class="dock-item" data-target="section-editor" title="Editor">
-            <i class="fa-brands fa-wordpress"></i>
+        <div class="dock-item" data-target="section-virtual-tour" title="Virtual Tour">
+            <i class="fa-solid fa-vr-cardboard"></i>
+            <span class="dock-label">Virtual Tour</span>
+        </div>
+        <div class="dock-item" data-target="section-research-site" title="Research Site">
+            <i class="fa-solid fa-microscope"></i>
+            <span class="dock-label">Research Site</span>
+        </div>
+        <div class="dock-item" data-target="section-news" title="News">
+            <i class="fa-solid fa-newspaper"></i>
             <span class="dock-label">News</span>
         </div>
-        <div class="dock-item" data-target="section-future" title="The Future">
-            <i class="fa-solid fa-glasses"></i>
-            <span class="dock-label">WebXR</span>
+        <div class="dock-item" data-target="section-publication" title="Publication">
+            <i class="fa-solid fa-book"></i>
+            <span class="dock-label">Publication</span>
+        </div>
+        <div class="dock-item" data-target="section-preprint" title="Preprint">
+            <i class="fa-solid fa-file-lines"></i>
+            <span class="dock-label">Preprint</span>
+        </div>
+        <div class="dock-item" data-target="section-projects" title="Recent Projects">
+            <i class="fa-solid fa-diagram-project"></i>
+            <span class="dock-label">Recent Projects</span>
+        </div>
+        <div class="dock-item" data-target="section-teaching" title="Teaching">
+            <i class="fa-solid fa-person-chalkboard"></i>
+            <span class="dock-label">Teaching</span>
+        </div>
+        <div class="dock-item" data-target="section-join" title="Join Us">
+            <i class="fa-solid fa-user-plus"></i>
+            <span class="dock-label">Join Us</span>
+        </div>
+        <div class="dock-item" data-target="section-legal" title="Legal Notice">
+            <i class="fa-solid fa-scale-balanced"></i>
+            <span class="dock-label">Legal Notice</span>
         </div>
     </nav>
 
@@ -300,7 +373,7 @@
 
     <!-- Person Modal -->
     <div id="person-modal" class="modal-overlay">
-        <div class="modal-content glass-card">
+        <div class="modal-content glass-card melted-3d-card">
             <span class="close-modal"><i class="fa-solid fa-xmark"></i></span>
             <div class="modal-header">
                 <div class="modal-avatar"><i class="fa-solid fa-user"></i></div>
