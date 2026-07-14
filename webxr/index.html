@@ -14,11 +14,11 @@
 
 <body>
     <!-- Hidden canvas to render PDF pages for WebXR -->
-    <canvas id="pdf-canvas" style="display: none;"></canvas>
+    <canvas id="pdf-canvas" style="visibility: hidden; position: absolute; z-index: -1; pointer-events: none; top: -9999px; left: -9999px; width: 1024px; height: 1024px;"></canvas>
 
     <a-scene>
         <a-assets>
-            <video id="video-asset" src="assets/videos/Crimson%20Memories.mp4" playsinline></video>
+            <video id="video-asset" src="assets/videos/Crimson_Memories.mp4" playsinline></video>
             <!-- Usamos el nuevo video para la experiencia 360 (pasado por tu proxy de Cloudflare) -->
             <video id="video-360-asset" src="https://snnu.smiteandoelblue.workers.dev/unity/video360" crossorigin="anonymous" playsinline loop></video>
 

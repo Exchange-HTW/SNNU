@@ -347,11 +347,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // ========== PLAYLIST DE VIDEOS ==========
     const videos = [
         {
-            src: 'assets/videos/Crimson%20Memories.mp4',
+            src: 'assets/videos/Crimson_Memories.mp4',
             titulo: 'VIDEO: Crimson Memories'
         },
         {
-            src: 'assets/videos/CEREAL-.mp4',
+            src: 'assets/videos/CEREAL.mp4',
             titulo: 'VIDEO: CEREAL'
         }
     ];
