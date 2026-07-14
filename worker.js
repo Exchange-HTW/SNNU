@@ -28,6 +28,27 @@ export default {
       });
     }
 
+    if (url.pathname === "/unity/video360") {
+      const requestHeaders = new Headers(request.headers);
+      const response = await fetch(
+        "https://github.com/Exchange-HTW/SNNU/releases/download/360/360Vid.mp4",
+        {
+          method: request.method,
+          headers: requestHeaders
+        }
+      );
+
+      const responseHeaders = new Headers(response.headers);
+      responseHeaders.set("Access-Control-Allow-Origin", "*");
+      responseHeaders.set("Content-Type", "video/mp4");
+
+      return new Response(response.body, {
+        status: response.status,
+        statusText: response.statusText,
+        headers: responseHeaders
+      });
+    }
+
     return fetch(request);
   }
 };
