@@ -18,7 +18,7 @@
 
     <a-scene>
         <a-assets>
-            <video id="video-asset" src="assets/videos/Crimson_Memories.mp4" playsinline></video>
+            <video id="video-asset" src="assets/videos/Crimson_Memories.mp4" autoplay loop crossorigin="anonymous" playsinline></video>
             <!-- Usamos el nuevo video para la experiencia 360 (pasado por tu proxy de Cloudflare) -->
             <video id="video-360-asset" src="https://snnu.smiteandoelblue.workers.dev/unity/video360" crossorigin="anonymous" playsinline loop></video>
 
@@ -293,7 +293,7 @@
                     geometry="primitive: plane; width: 1; height: 0.4" material="color: #4a4a8a; shader: flat"
                     animation__mouseenter="property: scale; to: 1.05 1.05 1.05; dur: 200; startEvents: mouseenter"
                     animation__mouseleave="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave">
-                    <a-text value="< Anterior" position="0 0 0.01" align="center" color="#ffffff"
+                    <a-text value="< Previous" position="0 0 0.01" align="center" color="#ffffff"
                         font="roboto"></a-text>
                 </a-entity>
 
@@ -302,7 +302,7 @@
                     geometry="primitive: plane; width: 1; height: 0.4" material="color: #4a4a8a; shader: flat"
                     animation__mouseenter="property: scale; to: 1.05 1.05 1.05; dur: 200; startEvents: mouseenter"
                     animation__mouseleave="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave">
-                    <a-text value="Siguiente >" position="0 0 0.01" align="center" color="#ffffff"
+                    <a-text value="Next >" position="0 0 0.01" align="center" color="#ffffff"
                         font="roboto"></a-text>
                 </a-entity>
             </a-entity>
