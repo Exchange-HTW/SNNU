@@ -1,0 +1,71 @@
+HOME_DATA = {
+    "continueLabel": "Discover SNNU",
+    "about": {
+        "kicker": "About the unit",
+        "title": ["One unit.", "Many scales."],
+        "directorRole": "Director",
+        "teamLink": "Meet the team",
+        "lead": "SNNU brings different disciplines together to understand neural systems and turn that understanding into technology with real world impact.",
+        "pillars": [
+            {"icon": "fa-brain", "label": "Multiscale systems neuroscience"},
+            {"icon": "fa-diagram-project", "label": "Quantitative neuromodeling"},
+            {"icon": "fa-wave-square", "label": "Neuroimaging"},
+        ],
+        "note": "A multidisciplinary research unit spanning systems neuroscience, engineering and clinical application.",
+    },
+    "mission": {
+        "kicker": "Our mission",
+        "title": "Bridging ideas and impact",
+        "intro": "From theoretical and computational neuroscience to applications in medicine and human-machine interaction.",
+        "cards": [
+            {"title": "Theory & computation", "text": "Models of complex neural systems"},
+            {"title": "Clinical medicine", "text": "Translation into patient-centered research"},
+            {"title": "Human-machine interaction", "text": "Technology designed around human cognition"},
+        ],
+        "focusLabel": "Research focus",
+        "focusTitle": "Neural correlates of",
+        "attention": "Attention",
+        "effort": "Cognitive effort",
+    },
+    "methods": {
+        "kicker": "How we investigate",
+        "title": "Methods across scales",
+        "badgeTitle": "Multi",
+        "badgeText": "spatial + temporal scales",
+        "items": [
+            {"icon": "fa-chart-line", "title": "Signal processing", "text": "Turning complex neural signals into measurable patterns."},
+            {"icon": "fa-cubes-stacked", "title": "Computational modeling", "text": "Connecting observations with quantitative models of neural systems."},
+            {"icon": "fa-microscope", "title": "Multiscale neuroimaging", "text": "Studying neural activity across multiple spatial and temporal scales."},
+            {"icon": "fa-wifi", "title": "Contact-less assessment", "text": "Developing unobtrusive neurocognitive and neurophysiological methods."},
+        ],
+    },
+    "labs": {
+        "kicker": "Where ideas become experiments",
+        "title": ["Six labs.", "One shared mission."],
+        "intro": "Specialized environments connect fundamental research, clinical translation and human-centered technology.",
+        "featured": [
+            {"id": 2, "domain": "Human-machine interaction", "role": "Lab Head", "description": "Exploring attention and cognitive effort in interactive environments."},
+            {"id": 1, "domain": "Medicine", "role": "Lab Head", "description": "Translating neuroscience and neurotechnology into clinical medicine."},
+            {"id": 3, "domain": "Measurements & modeling", "role": "Lab Head", "description": "Linking microscopic neural activity with macroscopic electrophysiology."},
+        ],
+        "cta": "Explore all research sites",
+    },
+    "network": {
+        "kicker": "A connected research ecosystem",
+        "title": ["Across faculties,", "institutes and sites."],
+        "intro": "SNNU belongs to the Medical Faculty of Saarland University and the Faculty of Engineering at htw saar.",
+        "timeline": [
+            {"year": "2005", "title": "University Hospital", "text": "SNNU research within the Neurocenter of Saarland University Hospital."},
+            {"year": "2012", "title": "Technikum", "text": "A new site at the Saarland University of Applied Sciences."},
+            {"year": "2013", "title": "Haptics Lab", "text": "The Neurocognitive Haptics Lab opens with INM."},
+            {"year": "2014", "title": "Bosenberg", "text": "Clinical research expands to the MediClin Rehabilitation Center."},
+            {"year": "2015", "title": "Driving Test Field", "text": "Real-world neurocognitive driving research is established."},
+            {"year": "2017", "title": "Visual Computing", "text": "The Visual Computing Lab joins the research landscape."},
+        ],
+        "sites": [
+            {"name": "Saarland University Hospital", "detail": "Neurocenter - since 2005"},
+            {"name": "MediClin Bosenberg", "detail": "Rehabilitation Center - since 2014"},
+            {"name": "Leibniz INM", "detail": "Institutional collaboration - since 2013"},
+        ],
+    },
+}
