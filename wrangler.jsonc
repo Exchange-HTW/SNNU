@@ -4,5 +4,8 @@
   "compatibility_date": "2026-06-19",
   "assets": {
     "directory": "frontend/dist"
+  },
+  "build": {
+    "command": "npm --prefix frontend install && npm --prefix frontend run build"
   }
 }
