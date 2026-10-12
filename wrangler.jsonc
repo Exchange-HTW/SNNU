@@ -1,8 +1,8 @@
 {
-  "name": "htw-videos",
+  "name": "snnu",
   "main": "worker.js",
   "compatibility_date": "2026-06-19",
   "assets": {
-    "directory": "."
+    "directory": "frontend/dist"
   }
 }

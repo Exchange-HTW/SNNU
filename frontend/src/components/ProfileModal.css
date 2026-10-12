@@ -1,0 +1,378 @@
+/* ============================================
+   ProfileModal — Person Profile Popup
+   ============================================ */
+
+/* Overlay backdrop */
+.profile-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: profileOverlayIn 0.25s ease-out;
+  padding: 2rem;
+}
+
+@keyframes profileOverlayIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.profile-modal-overlay--closing {
+  animation: profileOverlayOut 0.2s ease-in forwards;
+}
+
+@keyframes profileOverlayOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/* Modal card */
+.profile-modal {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  max-height: 85vh;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.18),
+    0 2px 8px rgba(0, 0, 0, 0.06);
+  animation: profileCardIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0;
+}
+
+@keyframes profileCardIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.profile-modal-overlay--closing .profile-modal {
+  animation: profileCardOut 0.2s ease-in forwards;
+}
+
+@keyframes profileCardOut {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+}
+
+/* Scrollbar */
+.profile-modal::-webkit-scrollbar {
+  width: 5px;
+}
+.profile-modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+.profile-modal::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Close button */
+.profile-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #64748b;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+.profile-modal__close:hover {
+  background: #f1f5f9;
+  color: #1e293b;
+  border-color: rgba(0, 0, 0, 0.12);
+  transform: scale(1.08);
+}
+
+/* Header area */
+.profile-modal__header {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  padding: 2.25rem 2rem 1.5rem;
+}
+
+/* Photo / Avatar */
+.profile-modal__avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+.profile-modal__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.profile-modal__avatar-icon {
+  font-size: 2.2rem;
+  color: #6366f1;
+  opacity: 0.7;
+}
+
+/* Name & role */
+.profile-modal__identity {
+  flex: 1;
+  min-width: 0;
+}
+.profile-modal__name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.25;
+  margin: 0 0 0.3rem;
+}
+.profile-modal__role {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #64748b;
+  margin: 0;
+}
+.profile-modal__lab {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #6366f1;
+  background: rgba(99, 102, 241, 0.08);
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(99, 102, 241, 0.15);
+}
+
+/* Divider */
+.profile-modal__divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.06), transparent);
+  margin: 0 2rem;
+}
+
+/* Body sections */
+.profile-modal__body {
+  padding: 1.25rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Section labels */
+.profile-modal__section-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+  margin-bottom: 0.5rem;
+}
+
+/* Bio */
+.profile-modal__bio {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #475569;
+  margin: 0;
+}
+
+/* Contact row */
+.profile-modal__contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: #475569;
+}
+.profile-modal__contact i {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  width: 18px;
+  text-align: center;
+}
+.profile-modal__contact a {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.profile-modal__contact a:hover {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+/* External links row */
+.profile-modal__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.profile-modal__link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(248, 250, 252, 0.8);
+  color: #475569;
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Inter', sans-serif;
+}
+.profile-modal__link-btn:hover {
+  background: rgba(99, 102, 241, 0.06);
+  color: #6366f1;
+  border-color: rgba(99, 102, 241, 0.2);
+  transform: translateY(-1px);
+}
+.profile-modal__link-btn i {
+  font-size: 0.9rem;
+}
+
+/* Publications list */
+.profile-modal__publications {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.profile-modal__pub-item {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: #475569;
+  padding: 0.6rem 0.85rem;
+  background: rgba(248, 250, 252, 0.7);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  position: relative;
+  padding-left: 1.5rem;
+}
+.profile-modal__pub-item::before {
+  content: '';
+  position: absolute;
+  left: 0.6rem;
+  top: 0.85rem;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+}
+
+/* Empty state */
+.profile-modal__empty {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .profile-modal-overlay {
+    padding: 1rem;
+    align-items: flex-end;
+  }
+
+  .profile-modal {
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .profile-modal__header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 1.5rem 1rem;
+  }
+
+  .profile-modal__avatar {
+    width: 132px;
+    height: 132px;
+  }
+
+  .profile-modal__body {
+    padding: 1rem 1.5rem 1.5rem;
+  }
+
+  .profile-modal__name {
+    font-size: 1.15rem;
+  }
+}
+
+/* Institutional affiliation */
+.profile-modal__affiliation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 0.9rem 1rem;
+  background: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 12px;
+}
+
+.profile-modal__affiliation-line {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  align-items: start;
+  gap: 0.55rem;
+  color: #475569;
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.profile-modal__affiliation-line i {
+  padding-top: 0.16rem;
+  color: #6366f1;
+  text-align: center;
+}
+.profile-modal__contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}

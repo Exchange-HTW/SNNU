@@ -1,0 +1,110 @@
+{
+  "sourceSite": "https://www.snnu.uni-saarland.de/",
+  "retrievedOn": "2026-08-11",
+  "note": "Only captions visibly associated with gallery images on the official SNNU pages are included. Images without a visible caption are intentionally omitted from this file.",
+  "labs": {
+    "translational": [
+      {
+        "file": "translational/TranslationalLabSlider1-700x470.png",
+        "caption": "Lab environment (top) | Real-life wireless EEG measurement with CI patient (right) | TMS research (bottom)"
+      },
+      {
+        "file": "translational/TranslationalLabSlider2-700x470.jpg",
+        "caption": "EEG measurements in 8-channel auditory free field"
+      },
+      {
+        "file": "translational/TranslationalLabSlider3-700x470.png",
+        "caption": "Artificial Ear and Headphones (left) | Hearing aid calibration equipment (right)"
+      },
+      {
+        "file": "translational/TranslationalLabSlider4-700x470.png",
+        "caption": "ERP measurements in 8-channel auditory free field"
+      }
+    ],
+    "mindscan": [
+      {
+        "file": "mindscan/MindscanLabSlider2-700x470.jpg",
+        "caption": "Wireless EEG in a driving scenario"
+      },
+      {
+        "file": "mindscan/Schlafen-400x268.jpg",
+        "title": "Self-Driving Cars",
+        "caption": "Baseline measurements in a level 5 automated driving paradigm"
+      },
+      {
+        "file": "mindscan/Roboter-scaled-700x470.jpg",
+        "title": "Level 3",
+        "caption": "Level 3 automated driving scenario with a robot for the steering wheel handover"
+      },
+      {
+        "file": "mindscan/Lesen-400x268.jpg",
+        "title": "Level 4",
+        "caption": "Reading task in a level 4 automated driving scenario before handover"
+      },
+      {
+        "file": "mindscan/htw_23-04-2019_012-scaled-700x470.jpg",
+        "title": "Trunk",
+        "caption": "Real world driving platform with HPC hardware"
+      },
+      {
+        "file": "mindscan/htw_23-04-2019_027-scaled-700x470.jpg",
+        "title": "Real World Experiments",
+        "caption": "Automated driving paradigm with a real world driving task"
+      }
+    ],
+    "multiscale": [
+      {
+        "file": "multiscale/MultiscaleLabSlider1-700x470.png",
+        "caption": "Highspeed camera for voltage sensitive dye (VSD) imaging"
+      },
+      {
+        "file": "multiscale/MultiscaleLabSlider2-700x470.jpg",
+        "caption": "Measurement system with VSD camera"
+      },
+      {
+        "file": "multiscale/MultiscaleLabSlider3-700x470.png",
+        "caption": "Multiscale measurements (VSD & multi-electrode arrays)"
+      },
+      {
+        "file": "multiscale/MultiscaleLabMovie1.gif",
+        "caption": "Simulated Neural Field (excitatory)"
+      },
+      {
+        "file": "multiscale/MultiscaleLabMovie2.gif",
+        "caption": "Simulated Neural Field (inhibitory)"
+      }
+    ],
+    "driving-test-field": [
+      {
+        "file": "driving-test-field/NeurocognitiveDrivingTestFieldSlider1-700x470.jpg",
+        "caption": "Study car with pedestrian wearing a wireless EEG system"
+      },
+      {
+        "file": "driving-test-field/NeurocognitiveDrivingTestFieldSlider2-700x470.jpg",
+        "caption": "Study car with pedestrian wearing a wireless EEG system"
+      },
+      {
+        "file": "driving-test-field/NeurocognitiveDrivingTestFieldSlider3-700x470.jpg",
+        "caption": "Dual hi-res EEG monitoring of driver and codriver"
+      },
+      {
+        "file": "driving-test-field/NeurocognitiveDrivingTestFieldSlider4-700x470.jpg",
+        "caption": "Study car"
+      },
+      {
+        "file": "driving-test-field/NeurocognitiveDrivingTestFieldSlider5-700x470.jpg",
+        "caption": "Study car (driver and codriver)"
+      },
+      {
+        "file": "driving-test-field/NeurocognitiveDrivingTestFieldSlider6-700x470.jpg",
+        "caption": "Dual hi-res EEG monitor integrated into the study car"
+      }
+    ],
+    "haptics": [
+      {
+        "file": "haptics/NeurocognitiveHapticsLabSlider1-700x265.png",
+        "caption": "Tribologic ERP measurement setup"
+      }
+    ]
+  }
+}
