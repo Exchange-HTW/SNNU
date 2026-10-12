@@ -3,6 +3,7 @@ import './App.css'
 import HomePage from './components/HomePage'
 import ProfileModal from './components/ProfileModal'
 import ResearchLabDetail from './components/ResearchLabDetail'
+import defaultPageData from './data/defaultPageData.json'
 
 // Available languages for the picker
 const LANGUAGES = [
@@ -61,8 +62,8 @@ const DEFAULT_RESEARCH_LABS = [
   { id: 6, name: 'Neurocognitive Driving Test Field', desc: 'Neurocognitive assessment in realistic driving scenarios', icon: 'fa-car-side' },
 ];
 function App() {
-  const [page, setPage] = useState(null)
-  const [isLoading, setIsLoading] = useState(true)
+  const [page, setPage] = useState(defaultPageData)
+  const [isLoading, setIsLoading] = useState(false)
   const [loadError, setLoadError] = useState('')
   const [selections, setSelections] = useState({
     school: "HTW Saar",
@@ -124,8 +125,10 @@ function App() {
         setPage(data);
         setLoadError('');
       } catch (error) {
-        console.error("Failed to fetch initial data:", error);
-        setLoadError(`Unable to load the page API: ${error.message}`);
+        console.warn("Backend API not reachable; using bundled default data in English:", error);
+        // Fallback gracefully to default data without blocking the UI
+        setPage(defaultPageData);
+        setLoadError('');
       } finally {
         setIsLoading(false);
       }
@@ -173,27 +176,37 @@ function App() {
   }, [page]);
 
   const requestGeneratedPage = async (newSelections) => {
-    setIsLoading(true)
-    setLoadError('')
+    if (newSelections.language === 'en') {
+      setPage(defaultPageData);
+      setSelections(newSelections);
+      setLoadError('');
+      setIsLoading(false);
+      return;
+    }
+
+    setIsLoading(true);
+    setLoadError('');
     try {
       const response = await fetch(`${API_BASE_URL}/generate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newSelections)
-      })
+      });
       if (!response.ok) {
-        const payload = await response.json().catch(() => ({}))
-        throw new Error(payload.detail || `Translation API returned ${response.status}`)
+        const payload = await response.json().catch(() => ({}));
+        throw new Error(payload.detail || `Translation API returned ${response.status}`);
       }
-      setPage(await response.json())
-      setSelections(newSelections)
+      setPage(await response.json());
+      setSelections(newSelections);
     } catch (error) {
-      console.error('Error generating translated content:', error)
-      setLoadError(error.message)
+      console.error('Error generating translated content:', error);
+      alert(`The AI translation service (Ollama) is currently unavailable or unreachable. Displaying the portal in English.\n\nDetail: ${error.message}`);
+      setSelections({ ...newSelections, language: 'en' });
+      setPage(defaultPageData);
     } finally {
-      setIsLoading(false)
+      setIsLoading(false);
     }
-  }
+  };
 
   const handleLanguageChange = (langCode) => {
     requestGeneratedPage({ ...selections, language: langCode })
